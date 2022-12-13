@@ -23,6 +23,6 @@ public class LineComperisionMain {
         double y2 = sn.nextDouble();
 
         double length = calLength(x1,y1,x2,y2);
-        System.out.println(length);
+        System.out.println("Length of the Line is :"+length);
     }
 }
