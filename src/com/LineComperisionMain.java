@@ -6,13 +6,13 @@ import java.util.Scanner;
 
 public class LineComperisionMain {
 
-    public static double calLength(double x1,double y1,double x2,double y2)
+    public  double calLength(double x1,double y1,double x2,double y2)
     {
-            double length =Math.sqrt(((x2-x1)*(x2-x1)+(y2-y1*(y2-y1))));
+            double length =Math.sqrt(((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)));
               return length;
     }
 
-    public static int lengthEquality(double length, double length1) {
+    public  int lengthEquality(double length, double length1) {
         int flag;
         Double len = new Double(length);
         Double len1 = new Double(length1);
@@ -41,7 +41,9 @@ public class LineComperisionMain {
         double x2 =sn.nextDouble();
         System.out.println("Enter y2");
         double y2 = sn.nextDouble();
-        double length = calLength(x1,y1,x2,y2);
+
+        LineComperisionMain lineComperisionMain = new LineComperisionMain();
+        double length = lineComperisionMain.calLength(x1,y1,x2,y2);
 
         System.out.println("Enter a1");
         double a1 =sn.nextDouble();
@@ -51,8 +53,8 @@ public class LineComperisionMain {
         double a2 =sn.nextDouble();
         System.out.println("Enter b2");
         double b2 = sn.nextDouble();
-        double length1 = calLength(a1,b1,a2,b2);
-        int flag =lengthEquality(length,length1);
+        double length1 = lineComperisionMain.calLength(a1,b1,a2,b2);
+        int flag =lineComperisionMain.lengthEquality(length,length1);
         output(flag);
 
 
